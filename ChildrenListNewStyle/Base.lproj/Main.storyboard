@@ -1,24 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChildrenListNewStyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Персональные данные:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdd-Gr-Ztx">
+                                <rect key="frame" x="16" y="27" width="178.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dgF-Ek-qhQ">
+                                <rect key="frame" x="16" y="63.5" width="288" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="15k-39-EFE">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="UOY-Dh-48R"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Возраст" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hzb-fv-fff">
+                                        <rect key="frame" x="0.0" y="42" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="15k-39-EFE" firstAttribute="width" secondItem="hzb-fv-fff" secondAttribute="width" id="rS9-iQ-a6d"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="OK0-DJ-hHf">
+                                <rect key="frame" x="16" y="156.5" width="289.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дети (макс. 5)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUm-vB-BaT">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fk9-2b-crJ">
+                                        <rect key="frame" x="121.5" y="0.0" width="168" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="168" id="alE-ld-C0A"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system" title="Добавить ребенка">
+                                            <backgroundConfiguration key="background" cornerRadius="20">
+                                                <color key="strokeColor" red="0.61520337117355273" green="0.79166667835901849" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addChildButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="a6G-Wa-JpU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jAM-Yd-IaE">
+                                <rect key="frame" x="16" y="203" width="288" height="297"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="108" id="kEf-OC-j0n" customClass="ChildCell" customModule="ChildrenListNewStyle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="288" height="108"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kEf-OC-j0n" id="BDC-Qh-m3e">
+                                            <rect key="frame" x="0.0" y="0.0" width="288" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AzP-sh-uFy">
+                                                    <rect key="frame" x="16" y="11" width="141" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="141" id="uCG-k6-PVu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmu-FZ-75c">
+                                                    <rect key="frame" x="187" y="11" width="91" height="31"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Удалить"/>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Возраст" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FPk-xn-yDA">
+                                                    <rect key="frame" x="16" y="53" width="141" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="AzP-sh-uFy" firstAttribute="top" secondItem="BDC-Qh-m3e" secondAttribute="top" constant="11" id="4Tx-ZV-orz"/>
+                                                <constraint firstAttribute="trailing" secondItem="dmu-FZ-75c" secondAttribute="trailing" constant="10" id="5Td-fW-OXf"/>
+                                                <constraint firstItem="AzP-sh-uFy" firstAttribute="leading" secondItem="BDC-Qh-m3e" secondAttribute="leading" constant="16" id="VL9-f7-THe"/>
+                                                <constraint firstItem="AzP-sh-uFy" firstAttribute="width" secondItem="FPk-xn-yDA" secondAttribute="width" id="VgT-PU-vqp"/>
+                                                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="FPk-xn-yDA" secondAttribute="trailing" constant="131" id="aae-ss-GoX"/>
+                                                <constraint firstItem="FPk-xn-yDA" firstAttribute="top" secondItem="AzP-sh-uFy" secondAttribute="bottom" constant="8" symbolic="YES" id="eA3-3G-atl"/>
+                                                <constraint firstAttribute="bottom" secondItem="AzP-sh-uFy" secondAttribute="bottom" constant="63" id="evX-ou-aeB"/>
+                                                <constraint firstItem="dmu-FZ-75c" firstAttribute="top" secondItem="BDC-Qh-m3e" secondAttribute="top" constant="11" id="mYq-Jb-JgT"/>
+                                                <constraint firstItem="FPk-xn-yDA" firstAttribute="leading" secondItem="BDC-Qh-m3e" secondAttribute="leading" constant="16" id="maa-Ap-zhH"/>
+                                                <constraint firstItem="dmu-FZ-75c" firstAttribute="leading" secondItem="AzP-sh-uFy" secondAttribute="trailing" constant="30" id="pdL-v5-AkB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="childAgeTF" destination="FPk-xn-yDA" id="Stb-h7-JuV"/>
+                                            <outlet property="childNameTF" destination="AzP-sh-uFy" id="aON-PV-fMv"/>
+                                            <outlet property="deleteButton" destination="dmu-FZ-75c" id="UMu-oR-pX1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="qBb-5E-lns"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJq-le-O49">
+                                <rect key="frame" x="91" y="517" width="138" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="138" id="nJq-q3-ON6"/>
+                                </constraints>
+                                <color key="tintColor" red="0.70196078431372544" green="0.011764705882352941" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Очистить">
+                                    <backgroundConfiguration key="background" cornerRadius="20">
+                                        <color key="strokeColor" red="0.70196078431372544" green="0.011764705882352941" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="deleteButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="I64-GE-c0f"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dgF-Ek-qhQ" secondAttribute="trailing" constant="16" id="23g-ae-6xx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RJq-le-O49" secondAttribute="bottom" constant="20" id="2a1-TG-tDP"/>
+                            <constraint firstItem="RJq-le-O49" firstAttribute="top" secondItem="jAM-Yd-IaE" secondAttribute="bottom" constant="17" id="D0b-xD-ym3"/>
+                            <constraint firstItem="RJq-le-O49" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="91" id="L21-TE-Mog"/>
+                            <constraint firstItem="dgF-Ek-qhQ" firstAttribute="top" secondItem="tdd-Gr-Ztx" secondAttribute="bottom" constant="17" id="LdF-8D-pao"/>
+                            <constraint firstItem="dgF-Ek-qhQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lxd-q7-eZy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jAM-Yd-IaE" secondAttribute="trailing" constant="16" id="RDF-9L-32G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RJq-le-O49" secondAttribute="trailing" constant="91" id="Xvs-Cj-nYv"/>
+                            <constraint firstItem="jAM-Yd-IaE" firstAttribute="top" secondItem="OK0-DJ-hHf" secondAttribute="bottom" constant="15.5" id="b15-ye-2zf"/>
+                            <constraint firstItem="OK0-DJ-hHf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="e2F-Jg-3PO"/>
+                            <constraint firstItem="tdd-Gr-Ztx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hrd-7Z-sfA"/>
+                            <constraint firstItem="tdd-Gr-Ztx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="lLb-tp-93K"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tdd-Gr-Ztx" secondAttribute="trailing" constant="125.5" id="rvY-rN-Ss8"/>
+                            <constraint firstItem="jAM-Yd-IaE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ur2-A6-JDO"/>
+                            <constraint firstItem="OK0-DJ-hHf" firstAttribute="top" secondItem="dgF-Ek-qhQ" secondAttribute="bottom" constant="17" id="vYF-EY-aIB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OK0-DJ-hHf" secondAttribute="trailing" constant="14.5" id="zWe-rv-AGF"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addButton" destination="fk9-2b-crJ" id="7OQ-aK-IJJ"/>
+                        <outlet property="ageTF" destination="hzb-fv-fff" id="KJk-yO-Mb7"/>
+                        <outlet property="nameTF" destination="15k-39-EFE" id="KQm-41-DEv"/>
+                        <outlet property="tableView" destination="jAM-Yd-IaE" id="mcL-HM-57S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-26.25" y="51.760563380281688"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

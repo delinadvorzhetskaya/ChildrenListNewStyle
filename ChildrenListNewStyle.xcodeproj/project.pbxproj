@@ -13,6 +13,8 @@
 		698EB73827C928A6009624A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698EB73627C928A6009624A3 /* Main.storyboard */; };
 		698EB73A27C928A9009624A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 698EB73927C928A9009624A3 /* Assets.xcassets */; };
 		698EB73D27C928A9009624A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 698EB73B27C928A9009624A3 /* LaunchScreen.storyboard */; };
+		698EB74527C93BC2009624A3 /* Child.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698EB74427C93BC2009624A3 /* Child.swift */; };
+		698EB74727C93FB4009624A3 /* ChildCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698EB74627C93FB4009624A3 /* ChildCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		698EB73927C928A9009624A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		698EB73C27C928A9009624A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		698EB73E27C928A9009624A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		698EB74427C93BC2009624A3 /* Child.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Child.swift; sourceTree = "<group>"; };
+		698EB74627C93FB4009624A3 /* ChildCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				698EB73227C928A6009624A3 /* SceneDelegate.swift */,
 				698EB73427C928A6009624A3 /* ViewController.swift */,
 				698EB73627C928A6009624A3 /* Main.storyboard */,
+				698EB74427C93BC2009624A3 /* Child.swift */,
+				698EB74627C93FB4009624A3 /* ChildCell.swift */,
 				698EB73927C928A9009624A3 /* Assets.xcassets */,
 				698EB73B27C928A9009624A3 /* LaunchScreen.storyboard */,
 				698EB73E27C928A9009624A3 /* Info.plist */,
@@ -140,6 +146,8 @@
 			files = (
 				698EB73527C928A6009624A3 /* ViewController.swift in Sources */,
 				698EB73127C928A6009624A3 /* AppDelegate.swift in Sources */,
+				698EB74727C93FB4009624A3 /* ChildCell.swift in Sources */,
+				698EB74527C93BC2009624A3 /* Child.swift in Sources */,
 				698EB73327C928A6009624A3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,7 +314,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +342,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
